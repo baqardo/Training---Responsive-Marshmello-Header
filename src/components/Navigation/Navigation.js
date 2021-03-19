@@ -10,7 +10,7 @@ class Navigation extends Component {
     this.state = { isMobileNav: false };
     this.mobileNavLinkRef = React.createRef();
 
-    this.mobileNavTemplate = (
+    this.mobileNav = (
       <nav className="nav-mobile">
         <ul className="nav__list nav__list--mobile">
           <li className="nav__item nav__item--mobile">
@@ -55,7 +55,7 @@ class Navigation extends Component {
   render() {
     return (
       <>
-        {this.state.isMobileNav && this.mobileNavTemplate}
+        {this.state.isMobileNav && this.mobileNav}
         <nav className="nav">
           <ul className="nav__list">
             <li className="nav__item nav__item--logo">
