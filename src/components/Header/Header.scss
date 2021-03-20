@@ -1,11 +1,21 @@
 .header {
-  width: 90%;
+  display: flex;
 
-  margin: 0 auto;
-  margin-top: 10em;
+  height: 100vh;
+
+  margin-left: 5%;
+}
+
+.header__left {
+  position: relative;
+  width: 700px;
 }
 
 .header__info {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
   width: 450px;
 }
 
@@ -21,7 +31,6 @@
 .header__address {
   margin-top: 2em;
 
-  font-family: nunito, sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.5em;
@@ -30,7 +39,6 @@
 .header__date {
   margin-top: 2em;
 
-  font-family: nunito, sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
 }
@@ -40,11 +48,76 @@
 
   margin-top: 2em;
 
-  font-family: nunito, sans-serif;
   font-weight: 400;
   line-height: 1.5em;
 }
 
 .header__cta {
   margin-top: 4em;
+}
+
+.header__play {
+  position: absolute;
+  top: 30%;
+
+  display: flex;
+  align-items: center;
+}
+
+.header__play-caption {
+  margin-right: 1em;
+}
+
+.header__play-button {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  background-color: #e32c56;
+  border: none;
+  border-radius: 50%;
+
+  box-shadow: 0 2px 8px rgba(black, 0.4);
+
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    transform: translateY(-5px);
+    box-shadow: 0 3px 8px rgba(black, 0.5);
+  }
+
+  &::after {
+    content: "";
+
+    border-top: 0.75em solid transparent;
+    border-bottom: 0.75em solid transparent;
+    border-left: 0.75em solid white;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -10;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid rgba(#e6e6e6, 0.4);
+  }
+}
+
+.header__marshmallow {
+  position: relative;
+  z-index: 100;
+  pointer-events: none;
 }

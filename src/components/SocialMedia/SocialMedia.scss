@@ -1,0 +1,32 @@
+.social-media {
+  position: absolute;
+  bottom: 50px;
+
+  &__icon {
+    height: 100%;
+
+    margin-right: 0.5em;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+
+    opacity: 0.7;
+    height: 20px;
+
+    margin-right: 2em;
+
+    text-decoration: none;
+
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__name {
+    color: black;
+  }
+}

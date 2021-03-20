@@ -4,24 +4,22 @@ $small-bp: 600px;
 
 .nav {
   //Make logo and burger visible when mobile-nav is visible
-  position: relative;
+  position: absolute;
   z-index: 10;
 
-  width: 90%;
+  width: 95%;
 
-  margin: 0 auto;
   margin-top: 2em;
+  margin-left: 5%;
 
   @media screen and (min-width: $large-bp) {
-    width: 80%;
-  }
-
-  @media screen and (max-width: $medium-bp) {
-    width: 95%;
+    width: 90%;
+    margin-left: 10%;
   }
 
   @media screen and (max-width: $small-bp) {
-    width: 80%;
+    width: 90%;
+    margin-left: 10%;
   }
 }
 
@@ -104,7 +102,6 @@ $small-bp: 600px;
   padding: 0.5em 0;
 
   color: #2a2a2a;
-  font-family: nunito, sans-serif;
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
@@ -194,10 +191,14 @@ $small-bp: 600px;
   position: absolute;
   top: 0;
 
+  z-index: 10;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
   width: 100vw;
   height: 100vh;
+
+  background-color: white;
 }
