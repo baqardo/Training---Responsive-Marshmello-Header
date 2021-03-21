@@ -5,9 +5,10 @@
   border: #1f1f1f solid 1px;
   border-left: #e32e57 solid 5px;
 
-  box-shadow: 0 2px 8px rgba(black, 0.4);
+  box-shadow: 0 4px 6px rgba(black, 0.4);
 
   color: white;
+  font-size: inherit;
 
   transition: all 0.3s;
 
@@ -16,7 +17,7 @@
     cursor: pointer;
 
     transform: translateY(-5px);
-    box-shadow: 0 3px 8px rgba(black, 0.5);
+    box-shadow: 0 4px 8px rgba(black, 0.5);
   }
 
   &--white {
@@ -27,6 +28,6 @@
   }
 
   &--space-right {
-    margin-right: 1em;
+    margin-right: 1.5em;
   }
 }

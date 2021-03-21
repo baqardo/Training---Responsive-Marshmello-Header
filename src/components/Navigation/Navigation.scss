@@ -1,97 +1,92 @@
-$large-bp: 1600px;
-$medium-bp: 840px;
-$small-bp: 600px;
+$huge: 1920px;
+$medium: 1280px;
+$small: 640px;
 
 .nav {
-  //Make logo and burger visible when mobile-nav is visible
   position: absolute;
   z-index: 10;
 
+  margin-left: 5%;
+  margin-top: 2em;
+
   width: 95%;
 
-  margin-top: 2em;
-  margin-left: 5%;
+  @media screen and (max-width: $small) {
+    position: relative;
 
-  @media screen and (min-width: $large-bp) {
-    width: 90%;
-    margin-left: 10%;
+    width: min(90%, 500px);
+
+    margin: 0 auto;
+    margin-top: 2em;
   }
 
-  @media screen and (max-width: $small-bp) {
-    width: 90%;
-    margin-left: 10%;
+  @media screen and (min-width: $huge) {
+    position: relative;
+
+    margin: 0 auto;
+    margin-top: 2em;
+
+    width: max(70%, 1450px);
   }
 }
 
 .nav__list {
   display: flex;
+  align-items: center;
 
   list-style: none;
 
-  @media screen and (min-width: $large-bp) {
-    font-size: 1.5rem;
-  }
-
-  @media screen and (max-width: $medium-bp) {
-    font-size: 0.875rem;
-  }
-
-  @media screen and (max-width: $small-bp) {
+  @media screen and(max-width: $small) {
     justify-content: space-between;
   }
 
   &--mobile {
-    @media screen and (orientation: landscape) {
-      margin-top: 5em;
-      font-size: 0.75rem;
-    }
+    flex-direction: column;
 
-    @media screen and (max-width: $small-bp) {
-      flex-direction: column;
-      font-size: 1.5rem;
-    }
+    margin-bottom: 3em;
+
+    font-size: 2rem;
   }
 }
 
 .nav__item {
-  display: flex;
-  align-items: center;
   margin-left: 4em;
 
-  @media screen and (max-width: $medium-bp) {
-    margin-left: 3em;
-  }
-
-  @media screen and (max-width: $small-bp) {
+  @media screen and (max-width: $small) {
     display: none;
   }
 
-  &--logo {
-    margin: 0;
-    width: 10%;
+  @media screen and (max-width: $medium) {
+    margin-left: 3em;
+  }
 
-    @media screen and (max-width: $medium-bp) {
-      width: auto;
-      margin-right: 2em;
+  &--logo {
+    margin-left: 0;
+    margin-right: 10%;
+
+    @media screen and (max-width: $medium) {
+      margin-right: 5%;
     }
 
-    @media screen and (max-width: $small-bp) {
-      display: flex;
+    @media screen and(max-width: $small) {
+      display: block;
     }
   }
 
   &--burger {
     display: none;
 
-    @media screen and (max-width: $small-bp) {
-      display: flex;
+    @media screen and(max-width: $small) {
+      display: block;
     }
   }
 
   &--mobile {
-    @media screen and (max-width: $small-bp) {
-      display: flex;
-      margin: 0.5em 0;
+    margin-left: 0;
+    margin-top: 1.5em;
+
+    @media screen and(max-width: $small) {
+      display: block;
     }
   }
 }
@@ -101,17 +96,22 @@ $small-bp: 600px;
 
   padding: 0.5em 0;
 
-  color: #2a2a2a;
-  font-weight: 500;
+  color: black;
   text-decoration: none;
-  text-transform: uppercase;
 
   transition: all 0.3s;
-
   &:hover,
   &:focus {
-    cursor: pointer;
     opacity: 1;
+  }
+
+  &--logo {
+    display: block;
+    opacity: 1;
+
+    height: 33px;
+
+    padding: 0;
   }
 
   &--current-page {
@@ -121,19 +121,11 @@ $small-bp: 600px;
 
     pointer-events: none;
 
-    &:hover {
-      cursor: default;
-    }
-
     &::before {
       content: "";
       position: absolute;
-      left: -1.2em;
-      top: 1.2em;
-
-      width: 0;
-      height: 0;
-      transform: translateY(-50%);
+      left: -1em;
+      top: 0.4em;
 
       border-top: 0.5em solid transparent;
       border-bottom: 0.5em solid transparent;
@@ -141,29 +133,19 @@ $small-bp: 600px;
     }
   }
 
-  &--logo {
-    opacity: 1;
-    width: 40px;
+  &--burger {
+    display: block;
 
-    @media screen and (min-width: $large-bp) {
-      width: 80px;
-    }
+    opacity: 1;
   }
 }
 
 .nav__logo {
-  width: 100%;
+  height: 100%;
 }
 
-.nav__burger {
-  padding: 0.5em 0;
-
-  background-color: white;
-  border: none;
-
-  &:hover {
-    cursor: pointer;
-  }
+.nav__link--burger:hover .nav__burger-line--short {
+  width: 35px;
 }
 
 .nav__burger-line {
@@ -175,30 +157,30 @@ $small-bp: 600px;
   background-color: black;
   border-radius: 10px;
 
-  &--small {
+  transition: all 0.3s;
+
+  &--short {
     width: 20px;
     margin-left: auto;
-
-    transition: all 0.3s;
   }
-}
-
-.nav__burger:hover .nav__burger-line--small {
-  width: 35px;
 }
 
 .nav-mobile {
   position: absolute;
-  top: 0;
-
   z-index: 10;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
+  overflow-y: scroll;
+
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
+
+  margin-top: 4em;
+  padding-top: 4em;
 
   background-color: white;
 }

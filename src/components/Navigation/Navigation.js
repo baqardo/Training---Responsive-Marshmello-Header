@@ -14,22 +14,22 @@ class Navigation extends Component {
       <nav className="nav-mobile">
         <ul className="nav__list nav__list--mobile">
           <li className="nav__item nav__item--mobile">
-            <a className="nav__link nav__link--mobile nav__link--current-page" href="#self" ref={this.mobileNavLinkRef}>
+            <a className="nav__link nav__link--current-page" href="#self" ref={this.mobileNavLinkRef}>
               Upcoming show
             </a>
           </li>
           <li className="nav__item nav__item--mobile">
-            <a className="nav__link nav__link--mobile" href="#self" onClick={this.toggleMobileNav}>
+            <a className="nav__link" href="#self" onClick={this.toggleMobileNav}>
               Media
             </a>
           </li>
           <li className="nav__item nav__item--mobile">
-            <a className="nav__link nav__link--mobile" href="#self" onClick={this.toggleMobileNav}>
+            <a className="nav__link" href="#self" onClick={this.toggleMobileNav}>
               Songs
             </a>
           </li>
           <li className="nav__item nav__item--mobile">
-            <a className="nav__link nav__link--mobile" href="#self" onClick={this.toggleMobileNav}>
+            <a className="nav__link" href="#self" onClick={this.toggleMobileNav}>
               Merchandise
             </a>
           </li>
@@ -39,8 +39,12 @@ class Navigation extends Component {
   }
 
   componentDidUpdate() {
-    if (!this.state.isMobileNav) return;
+    if (!this.state.isMobileNav) {
+      document.body.style.overflowY = "auto";
+      return;
+    }
 
+    document.body.style.overflowY = "hidden";
     this.mobileNavLinkRef.current.focus();
   }
 
@@ -85,9 +89,9 @@ class Navigation extends Component {
             </li>
 
             <li className="nav__item nav__item--burger">
-              <a className="nav__burger" href="#self" onClick={this.toggleMobileNav}>
+              <a className="nav__link nav__link--burger" href="#self" onClick={this.toggleMobileNav}>
                 <div className="nav__burger-line"></div>
-                <div className="nav__burger-line nav__burger-line--small"></div>
+                <div className="nav__burger-line nav__burger-line--short"></div>
               </a>
             </li>
           </ul>

@@ -1,7 +1,6 @@
-.social-media {
-  position: absolute;
-  bottom: 50px;
+$small: 640px;
 
+.social-media {
   &__icon {
     height: 100%;
 
@@ -21,12 +20,17 @@
 
     transition: all 0.3s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       opacity: 1;
     }
   }
 
   &__name {
     color: black;
+
+    @media screen and(max-width: $small) {
+      display: none;
+    }
   }
 }
