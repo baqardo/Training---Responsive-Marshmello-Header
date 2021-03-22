@@ -37,6 +37,13 @@ const Header = props => (
         <Button spaceRight>Get Tickets</Button>
         <Button white>More</Button>
       </div>
+
+      <div className="header__legal">
+        Designed by{" "}
+        <a className="header__legal-link" href="https://dribbble.com/nkchaudhary01">
+          Neelesh Chaudhary
+        </a>
+      </div>
     </div>
 
     <div className="header__right">
