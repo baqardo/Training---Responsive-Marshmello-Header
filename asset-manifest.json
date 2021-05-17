@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Training---Responsive-Marshmello-Header/static/css/main.740e4c25.chunk.css",
+    "main.js": "/Training---Responsive-Marshmello-Header/static/js/main.de61f661.chunk.js",
+    "main.js.map": "/Training---Responsive-Marshmello-Header/static/js/main.de61f661.chunk.js.map",
+    "runtime-main.js": "/Training---Responsive-Marshmello-Header/static/js/runtime-main.5fab93e4.js",
+    "runtime-main.js.map": "/Training---Responsive-Marshmello-Header/static/js/runtime-main.5fab93e4.js.map",
+    "static/js/2.55b83cd0.chunk.js": "/Training---Responsive-Marshmello-Header/static/js/2.55b83cd0.chunk.js",
+    "static/js/2.55b83cd0.chunk.js.map": "/Training---Responsive-Marshmello-Header/static/js/2.55b83cd0.chunk.js.map",
+    "static/js/3.46cec0e2.chunk.js": "/Training---Responsive-Marshmello-Header/static/js/3.46cec0e2.chunk.js",
+    "static/js/3.46cec0e2.chunk.js.map": "/Training---Responsive-Marshmello-Header/static/js/3.46cec0e2.chunk.js.map",
+    "index.html": "/Training---Responsive-Marshmello-Header/index.html",
+    "static/css/main.740e4c25.chunk.css.map": "/Training---Responsive-Marshmello-Header/static/css/main.740e4c25.chunk.css.map",
+    "static/js/2.55b83cd0.chunk.js.LICENSE.txt": "/Training---Responsive-Marshmello-Header/static/js/2.55b83cd0.chunk.js.LICENSE.txt",
+    "static/media/marshmello.a7bd55ff.png": "/Training---Responsive-Marshmello-Header/static/media/marshmello.a7bd55ff.png",
+    "static/media/marshmelloOutfit.6333d84e.png": "/Training---Responsive-Marshmello-Header/static/media/marshmelloOutfit.6333d84e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5fab93e4.js",
+    "static/js/2.55b83cd0.chunk.js",
+    "static/css/main.740e4c25.chunk.css",
+    "static/js/main.de61f661.chunk.js"
+  ]
+}
